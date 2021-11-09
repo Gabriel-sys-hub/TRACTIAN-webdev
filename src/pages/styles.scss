@@ -1,0 +1,575 @@
+.container {
+  .headerContainer {
+    display: flex;
+    background: linear-gradient(
+      to right,
+      var(--gradient-from),
+      var(--gradient-to)
+    );
+    width: 100%;
+    height: 100px;
+
+    img {
+      width: 15%;
+      margin-left: var(--margin);
+      color: var(--text-color);
+    }
+  }
+
+  .heroText {
+    align-items: center;
+    display: flex;
+    padding: 7rem;
+    flex-direction: row;
+    background: linear-gradient(
+      to right,
+      var(--gradient-from),
+      var(--gradient-to)
+    );
+    width: 100%;
+    height: 100%;
+
+    .heroImg {
+      width: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .heroContent {
+      align-items: flex-start;
+      color: var(--text-color);
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-self: center;
+      height: 100%;
+      width: 50%;
+
+      button {
+        background-color: var(--buttons-green);
+        border: none;
+        color: var(--text-color);
+        padding: 0.5rem;
+        font-size: larger;
+        font-weight: 600;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: var(--buttons-hover);
+        }
+      }
+    }
+  }
+
+  .wavesContainer {
+    align-items: flex-end;
+    background: linear-gradient(
+      to right,
+      var(--gradient-from),
+      var(--gradient-to)
+    );
+    display: flex;
+    width: 100%;
+    height: fit-content;
+
+    .waves {
+      width: 100%;
+    }
+  }
+
+  .main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+    h1 {
+      color: var(--gradient-to);
+    }
+
+    h2 {
+      color: var(--gradient-to);
+      text-align: center;
+      width: 50%;
+    }
+
+    .mainImgContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 60%;
+      }
+    }
+
+    .liContainer {
+      width: 30%;
+
+      ul {
+        li {
+          align-items: center;
+          display: flex;
+          justify-content: flex-start;
+          font-size: larger;
+
+          img {
+            width: 10%;
+          }
+        }
+      }
+    }
+  }
+
+  .videoContainer {
+    align-items: center;
+    background-color: var(--container-grey);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 7rem;
+    justify-content: center;
+
+    iframe {
+      border-radius: 5px;
+    }
+
+    h1,
+    h2 {
+      width: 70%;
+      text-align: center;
+      color: var(--gradient-to);
+    }
+  }
+  .percentContainer {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      to right,
+      var(--gradient-from),
+      var(--gradient-to)
+    );
+    color: var(--text-color);
+    padding: 7rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    .whitePercentContainer {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+
+      .percentColunm {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        font-size: x-large;
+        text-align: center;
+
+        .percent {
+          border: 5px solid var(--gradient-from);
+          background-color: white;
+          border-radius: 5px;
+          color: var(--gradient-from);
+          font-size: 50px;
+          font-weight: 900;
+          padding: 20px;
+          width: 70%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .tractianMotivation {
+    text-align: center;
+    padding: 2rem 7rem;
+
+    h1 {
+      color: var(--gradient-to);
+      margin-bottom: 80px;
+    }
+
+    button {
+      background-color: var(--buttons-green);
+      border: none;
+      color: var(--text-color);
+      padding: 0.5rem;
+      font-size: larger;
+      font-weight: 600;
+      border-radius: 5px;
+      margin-top: 100px;
+
+      &:hover {
+        background-color: var(--buttons-hover);
+      }
+    }
+
+    .tractianMotivationContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      .tractianBox {
+        border: solid 1px var(--gradient-from);
+        background: var(--text-color);
+        border-radius: 5px;
+        min-height: 240px;
+        height: 100%;
+        width: 20%;
+        color: var(--gradient-to);
+        transition: all 0.3s linear;
+
+        &:hover {
+          transition: all 0.3s linear;
+          transform: translateY(-30px);
+        }
+
+        img {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+      to right,
+      var(--gradient-to),
+      var(--gradient-to)
+    );
+    padding: 7rem;
+    width: 100%;
+
+    hr {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .logoContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      p {
+        color: var(--text-color);
+        width: 20%;
+      }
+
+      .socialMedia {
+        align-items: center;
+        display: flex;
+        width: 33%;
+        justify-content: space-between;
+      }
+
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: var(--text-color);
+      }
+
+      img {
+        width: 10%;
+      }
+    }
+  }
+}
+
+// Media Query -
+
+@media (max-width: 860px) {
+  .container {
+    .headerContainer {
+      justify-content: center;
+      display: flex;
+      background: linear-gradient(
+        to right,
+        var(--gradient-from),
+        var(--gradient-to)
+      );
+      width: 100%;
+      height: 100px;
+
+      img {
+        width: 50%;
+        color: var(--text-color);
+        margin: 0px;
+      }
+    }
+
+    .heroText {
+      align-items: center;
+      display: flex;
+      padding: 1rem;
+      flex-direction: column;
+      background: linear-gradient(
+        to right,
+        var(--gradient-from),
+        var(--gradient-to)
+      );
+      width: 100%;
+      height: 100%;
+
+      .heroImg {
+        width: 95%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .heroContent {
+        align-items: flex-start;
+        color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        height: 100%;
+        width: 95%;
+
+        button {
+          background-color: var(--buttons-green);
+          border: none;
+          color: var(--text-color);
+          padding: 0.5rem;
+          font-size: larger;
+          font-weight: 600;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: var(--buttons-hover);
+          }
+        }
+      }
+    }
+    .main {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      padding: 1rem;
+      height: 100%;
+      background-color: white;
+
+      h1 {
+        color: var(--gradient-to);
+      }
+
+      h2 {
+        color: var(--gradient-to);
+        text-align: center;
+        width: 100%;
+      }
+
+      .mainImgContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .liContainer {
+        width: 100%;
+
+        ul {
+          li {
+            align-items: center;
+            display: flex;
+            justify-content: flex-start;
+            font-size: larger;
+
+            img {
+              width: 10%;
+            }
+          }
+        }
+      }
+    }
+    .videoContainer {
+      align-items: center;
+      background-color: var(--container-grey);
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      justify-content: center;
+
+      iframe {
+        width: 80%;
+        height: 30%;
+        border-radius: 5px;
+      }
+
+      h1,
+      h2 {
+        width: 100%;
+        text-align: center;
+        color: var(--gradient-to);
+      }
+    }
+
+    .percentContainer {
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(
+        to right,
+        var(--gradient-from),
+        var(--gradient-to)
+      );
+      color: var(--text-color);
+      padding: 1rem;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 100%;
+      }
+
+      .whitePercentContainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+
+        .percentColunm {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          font-size: x-large;
+          text-align: center;
+
+          .percent {
+            border: 5px solid var(--gradient-from);
+            background-color: white;
+            border-radius: 5px;
+            color: var(--gradient-from);
+            font-size: 50px;
+            font-weight: 900;
+            padding: 20px;
+            width: 70%;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(
+        to right,
+        var(--gradient-to),
+        var(--gradient-to)
+      );
+      padding: 1rem;
+      width: 100%;
+
+      hr {
+        width: 100%;
+      }
+
+      .logoContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        gap: 10px;
+
+        .footerLogo {
+          display: none;
+        }
+
+        p {
+          color: var(--text-color);
+          width: 100%;
+        }
+
+        .socialMedia {
+          align-items: center;
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        button {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          color: var(--text-color);
+        }
+
+        img {
+          width: 10%;
+        }
+      }
+    }
+    .tractianMotivation {
+      padding: 0rem 1rem;
+
+      .tractianMotivationContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+  
+        .tractianBox {
+          border: solid 1px var(--gradient-from);
+          background: var(--text-color);
+          border-radius: 5px;
+          min-height: 240px;
+          margin-bottom: 20px;
+          height: 100%;
+          width: 100%;
+          color: var(--gradient-to);
+          transition: all 0.3s linear;
+  
+          &:hover {
+            transition: all 0.3s linear;
+            transform: translateY(-50px);
+          }
+  
+          img {
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+}
