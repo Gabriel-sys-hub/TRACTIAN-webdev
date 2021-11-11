@@ -6,13 +6,31 @@
       var(--gradient-from),
       var(--gradient-to)
     );
+    position: fixed;
     width: 100%;
     height: 100px;
+    transition: 0.2s ease-in-out all;
 
     img {
-      width: 15%;
+      width: 10%;
+      transition: 0.2s ease-in-out all;
       margin-left: var(--margin);
       color: var(--text-color);
+    }
+  }
+
+  .headerContainerScroling {
+    display: flex;
+    background: var(--gradient-to);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    transition: 0.2s ease-in-out all;
+
+    img {
+      transition: 0.2s ease-in-out all;
+      width: 15%;
+      margin-left: var(--margin);
     }
   }
 
@@ -30,7 +48,7 @@
     height: 100%;
 
     .heroImg {
-      width: 50%;
+      width: 100%;
 
       img {
         width: 100%;
@@ -162,6 +180,9 @@
     display: flex;
     flex-direction: column;
 
+    h1 {
+      font-size: 36px;
+    }
     img {
       width: 100%;
       margin-top: 50px;
@@ -203,7 +224,7 @@
 
     h1 {
       color: var(--gradient-to);
-      margin-bottom: 80px;
+      margin-bottom: 50px;
     }
 
     button {
@@ -281,11 +302,36 @@
         display: flex;
         width: 33%;
         justify-content: space-between;
+
+        img {
+          cursor: pointer;
+        }
+      }
+
+      a {
+        width: 15%;
+        transition: all 1s ease-in-out;
+        text-decoration: none;
+        text-align: end;
+        cursor: pointer;
+        color: var(--text-color);
+
+        &:after {
+          content: "↑";
+          font-size: 20px;
+          margin-left: 4px;
+          font-weight: bold;
+          color: aliceblue;
+          transition: margin-top 250ms;
+        }
       }
 
       button {
         background: transparent;
         border: none;
+        width: 23%;
+        text-decoration: none;
+        text-align: end;
         cursor: pointer;
         color: var(--text-color);
       }
@@ -496,6 +542,7 @@
       );
       padding: 1rem;
       width: 100%;
+      gap: 10px;
 
       hr {
         width: 100%;
@@ -513,9 +560,29 @@
           display: none;
         }
 
+        a {
+          width: 100%;
+          transition: all 1s ease-in-out;
+          text-decoration: none;
+          font-size: 24px;
+          text-align: center;
+          cursor: pointer;
+          color: var(--text-color);
+  
+          &:after {
+            content: "↑";
+            font-size: 20px;
+            margin-left: 4px;
+            font-weight: bold;
+            color: aliceblue;
+            transition: margin-top 250ms;
+          }
+        }
+
         p {
           color: var(--text-color);
           width: 100%;
+          text-align: center;
         }
 
         .socialMedia {
@@ -528,6 +595,7 @@
         button {
           background: transparent;
           border: none;
+          text-align: center;
           cursor: pointer;
           width: 100%;
           color: var(--text-color);
@@ -548,7 +616,7 @@
         width: 100%;
         justify-content: center;
         gap: 10px;
-  
+
         .tractianBox {
           border: solid 1px var(--gradient-from);
           background: var(--text-color);
@@ -559,12 +627,12 @@
           width: 100%;
           color: var(--gradient-to);
           transition: all 0.3s linear;
-  
+
           &:hover {
             transition: all 0.3s linear;
             transform: translateY(-50px);
           }
-  
+
           img {
             width: 40%;
           }

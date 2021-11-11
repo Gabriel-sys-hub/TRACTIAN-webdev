@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.scss";
 
 const Home: React.FC = () => {
+  const [newClass, setNewClass] = useState<boolean>(false);
+  
+  window.onscroll = function() {
+    const top = window.scrollY;
+    top > 200 ? setNewClass(true) : setNewClass(false);
+  }
+
   return (
-    <div className="container">
-      <header className="headerContainer">
-        <img src="./logo.svg" alt="logomarca" />
+    <div className="container" id="top">
+      <header className={ !newClass ? "headerContainer" : "headerContainerScroling" }>
+        <img src="./logo.svg" alt="logomarca" data-testid="headerLogo" />
       </header>
       <div className="heroText">
         <div className="heroContent">
@@ -99,7 +106,7 @@ const Home: React.FC = () => {
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        ></iframe>
+        />
       </div>
       <div className="percentContainer">
         <h1>A união perfeita de software e hardware em um só lugar</h1>
@@ -109,12 +116,12 @@ const Home: React.FC = () => {
         </h3>
         <div className="whitePercentContainer">
           <div className="percentColunm">
-            <div className="percent">↥ 60%</div>
-            Reduza em até 60% o custo de manutenção
+            <div className="percent">↑ 60%</div>
+            Aumente em até 60% a produção
           </div>
           <div className="percentColunm">
-            <div className="percent">↥ 60%</div>
-            Reduza em até 60% o custo de manutenção
+            <div className="percent">↑ 60%</div>
+            Aumente em até 60% a produção
           </div>
           <div className="percentColunm">
             <div className="percent">↧ 60%</div>
@@ -167,7 +174,7 @@ const Home: React.FC = () => {
       <footer className="footer">
         <div className="logoContainer">
           <img className="footerLogo" src="./logo.svg" alt="logomarca" />
-          <button name="">Voltar ao topo</button>
+          <a href="#top">Voltar ao Topo</a>
         </div>
         <hr />
         <div className="logoContainer">
@@ -190,7 +197,7 @@ const Home: React.FC = () => {
               alt=""
             />
           </div>
-          <button name="agende">Política de privacidade</button>
+          <button type="button">Política de privacidade</button>
         </div>
       </footer>
     </div>
