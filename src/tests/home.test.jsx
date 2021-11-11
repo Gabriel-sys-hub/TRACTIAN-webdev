@@ -4,11 +4,11 @@ import Home from "../pages/Home";
 
 describe("/Home", () => {
   it("Logomarca da TRACTIAN exista", () => {
-    const { getAllByText } = render(<Home />);
+    const { getByTestId } = render(<Home />);
 
-    const logomarca = getAllByText(/TRACTIAN/i);
-
-    expect(logomarca[0].innerHTML).toBe("TRACTIAN");
+    const logomarca = getByTestId(/headerLogo/i);
+    
+    expect(logomarca).toBeInTheDocument();
   });
 
   it("Hero contenha o texto", () => {
@@ -35,22 +35,11 @@ describe("/Home", () => {
     expect(texto.innerHTML).toBe("Indústrias inteligentes usam");
   });
 
-  it("Que exista uma imagem mostrando o site com 'graficos'", () => {
-    const { getByRole } = render(<Home />);
-
-    const img = getByRole("img", { alt: /tractian/i });
-
-    expect(img).toBeInTheDocument();
-  });
-
-  it("Que exista o texto 'Para além do nome indústria 4.0'", () => {
+  it("Que exista o texto 'Case de Sucesso: AmstedMaxion e TRACTIAN'", () => {
     const { getByText } = render(<Home />);
 
-    const texto = getByText(/Para além do nome indústria 4.0/i);
-    const botao = getByText(/Agende/i);
+    const texto = getByText(/Case de Sucesso: AmstedMaxion e TRACTIAN/i);
 
-    expect(botao.innerHTML).toBe("Agende uma demonstração");
-    expect(botao).toBeInTheDocument();
     expect(texto).toBeInTheDocument();
   });
 });
